@@ -5,7 +5,7 @@ var fs = require('fs');
 var database = require('./libs/database');
 
 var Port = normalizePort(process.env.PORT || 1000);
-var db = 'phuc';
+var db = 'admin';
 var companiesCollection = 'companies';
 var paticipantCollection = 'clients';
 var sessionCollection = 'session';
@@ -25,10 +25,11 @@ var Dich_vu = http.createServer(async function(req, res) {
             var companylist = await database.getlist(paticipantCollection, db);
             // console.log(companylist);
             companylist = JSON.stringify(companylist);
+            // console.log(companylist);
             res.end(companylist);
             return;
         }
-        console.log('acb');
+        // console.log('acb');
         res.end('app is working');
     })
 

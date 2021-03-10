@@ -1,9 +1,8 @@
 var mongodb = require('mongodb');
 
 var MongoClient = mongodb.MongoClient;
-var url = 'mongodb://tuanlinh:0123698745@34.71.215.8/tuanlinhdb?retryWrites=true&w=majority';
+var url = 'mongodb://dinhtatuanlinh:0123698745@35.185.189.38/admin';
 var db;
-
 
 function connectdatabase(collection, database) {
     return new Promise((res, rej) => {
